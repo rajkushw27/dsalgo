@@ -3,6 +3,12 @@ array = [75, 105, 120, 75, 90, 135]
 
 def sumOfNonAdj(array):
 
+    if not len(array):
+        return 0
+
+    if len(array) == 1:
+        return array[0]
+
     maxSumArray = array[:]
     maxSumArray[1] = max(array[0], array[1])
     for index in range(2, len(array)):
@@ -12,4 +18,4 @@ def sumOfNonAdj(array):
     return maxSumArray[-1]
 
 
-sumOfNonAdj(array)
+print(sumOfNonAdj(array))
